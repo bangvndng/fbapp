@@ -1,0 +1,106 @@
+/*スタイルここから
+--------------------------------------*/
+
+h1{
+    background: url(../img/logo.png) left top no-repeat;
+    width: 278px;
+    height: 39px;
+    text-indent: -9999px;
+    margin: 0 auto;
+}
+
+.page{
+    width: 900px;
+    margin:0 auto;
+}
+
+
+/* よく使うCSS start
+
+img {
+	max-width:100%;
+}
+
+table {
+	width:100%;
+}
+
+a,a:hover {
+	-webkit-transition: 0.7s;
+	-moz-transition: 0.7s;
+	-o-transition: 0.7s;
+	transition: 0.7s;
+}
+
+a img:hover {
+	filter: alpha(opacity=75);
+	-moz-opacity:0.75;
+	opacity:0.75;
+}
+
+よく使うCSS end -----
+時々使うCSS3 start ---
+
+テキストシャドウ {
+	text-shadow: 1px 1px 3px #000;
+}
+
+テキストシャドウ {
+	text-shadow: 1px 1px 3px #000;
+}
+
+ボックスシャドウ {
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+ボックスシャドウ内側 {
+	-moz-box-shadow: inset 1px 1px 3px #000;
+	-webkit-box-shadow: inset 1px 1px 3px #000;
+	box-shadow: inset 1px 1px 3px #000;
+}
+
+角丸 {
+	border-radius: 10px; 
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px; 
+}
+
+トランジション {
+	-webkit-transition: 1.5s;
+	-moz-transition: 1.5s;
+	-o-transition: 1.5s;
+	transition: 1.5s;
+}
+
+透明 {
+	filter: alpha(opacity=25);
+	-moz-opacity:0.25;
+	opacity:0.25;
+}
+
+背景のみ透明 {
+	background-color:rgba(255,255,255,0.2);
+}
+
+グラデーション {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000')";
+	background-image: -moz-linear-gradient(top, #ffffff, #000000);
+	background-image: -ms-linear-gradient(top, #ffffff, #000000);
+	background-image: -o-linear-gradient(top, #ffffff, #000000);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#000000));
+	background-image: -webkit-linear-gradient(top, #ffffff, #000000);
+	background-image: linear-gradient(top, #ffffff, #000000);
+}
+
+スマホ対応
+@media screen and (max-width: 480px){
+	
+}
+@media screen and (max-width: 320px){
+	
+}
+
+時々使うCSS3 end */
