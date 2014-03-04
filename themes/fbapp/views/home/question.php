@@ -109,39 +109,43 @@
 
     function callFbLogin()
     {
-         FB.login(function(response) {
+
+        FB.login(function(response) {
+            console.log("callFbLogin FB.login callback response");
+            console.log(response);
+
             if (response.authResponse) {
-             console.log('Welcome!  Fetching your information.... ');
-              authorized = true;
-              FB.api('/me/likes/' + PAGE_ID, function(response) {
-                if (response.data.length == 1) {
-                    like_button_clicked = true;
-                    if (!is_share) {
-                        $("#view_answer_result").attr('href', '<?php echo $this->createUrl("/home/answer?id=" . $answer->id . "&share=0") ?>');
-                    }
-                    else
-                    {
-                        $("#view_answer_result").attr('href', '<?php echo $this->createUrl("/home/answer?id=" . $answer->id ) ?>');
+                console.log('Welcome!  Fetching your information.... ');
+                authorized = true;
+                
+                FB.api('/me/likes/' + PAGE_ID, function(response) {
+
+                    if (response.data.length == 1) {
+                        like_button_clicked = true;
+                        if (!is_share) {
+                            $("#view_answer_result").attr('href', '<?php echo $this->createUrl("/home/answer?id=" . $answer->id . "&share=0") ?>');
+                        }else{
+                            $("#view_answer_result").attr('href', '<?php echo $this->createUrl("/home/answer?id=" . $answer->id ) ?>');
+                        }
+
+                    }else {
+                        $("#view_answer_result").attr('href', 'javascript:checkLikePage();');
+                        like_button_clicked = false;
                     }
 
-                }
-                else {
-                    $("#view_answer_result").attr('href', 'javascript:checkLikePage();');
-                    like_button_clicked = false;
-                }
-            });
-
-            /*
-            FB.api('/me', function(response) {
-                $.post('<?php echo $this->createUrl("/home/store") ?>', {'ajax' : 1 , user : response , 'app_id' : APP_ID, 'question_id' : <?php echo $model->id ?> } , function(data, textStatus, xhr) {
-                   console.log(data);
                 });
-            });
-            */
+
+                /*
+                FB.api('/me', function(response) {
+                    $.post('<?php echo $this->createUrl("/home/store") ?>', {'ajax' : 1 , user : response , 'app_id' : APP_ID, 'question_id' : <?php echo $model->id ?> } , function(data, textStatus, xhr) {
+                       console.log(data);
+                    });
+                });
+                */
            } else {
              console.log('User cancelled login or did not fully authorize.');
            }
-         }, {scope: '<?php echo $model->permissions ?>'});
+        }, {scope: '<?php echo $model->permissions ?>'});
     }
 
     function checkAppUserPermissions(response) {
